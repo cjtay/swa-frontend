@@ -1,0 +1,142 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------- BASE ----------  */
+
+@layer base {
+  * {
+    @apply font-sans;
+  }
+
+  h1 {
+    @apply text-3xl font-black;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  p {
+    @apply text-lg font-light;
+  }
+  li {
+    @apply text-base font-light;
+  }
+}
+
+/* ------- COMPONENTS ----------  */
+
+@layer components {
+  .btn-dark {
+    @apply px-5 py-2 text-center text-white transition duration-300 ease-in-out rounded-md cursor-pointer bg-swa-1 hover:bg-swa-2 focus:outline-none focus:ring-4 focus:ring-swa-4;
+  }
+  .btn-light {
+    @apply px-5 py-2 text-center text-purple-900 transition duration-300 ease-in-out bg-white rounded-md shadow hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-swa-3 active:bg-swa-1;
+  }
+
+  .label {
+    @apply font-bold text-swa-3;
+  }
+  .input-text {
+    @apply block w-full border border-gray-200 rounded focus:outline-none focus:border-purple-400 focus:ring-swa-4;
+  }
+  .select {
+    @apply block w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-purple-400 focus:ring-swa-4;
+  }
+  .textarea {
+    @apply block w-full px-4 py-2 border border-gray-200 rounded bg-gray-50 focus:outline-none focus:border-purple-400 focus:ring-swa-4;
+  }
+  .radio {
+    @apply w-32 p-2 mb-2 space-x-2 bg-gray-200 rounded focus:ring-swa-4 focus:border-swa-4;
+  }
+  .checkbox {
+    @apply items-center px-4 py-2 mb-2 mr-2 space-x-2 bg-gray-200 rounded sm:inline-block focus:ring-swa-4 focus:border-swa-4;
+  }
+
+  .date {
+    @apply block px-4 py-2 border rounded focus:outline-none border-swa-4 focus:border-purple-400 focus:ring-swa-3;
+  }
+
+  .gallery {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    align-items: stretch;
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    padding: 1em;
+    background-color: #333;
+  }
+
+  .gallery img {
+    border: 1px solid white;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 600px) {
+    .column {
+      column-count: 2;
+      column-gap: 2em;
+    }
+  }
+
+  .markdown {
+    @apply border-0;
+  }
+
+  .markdown h1 {
+    @apply text-swa-1;
+  }
+  .markdown h2 {
+    @apply text-swa-1;
+  }
+  .markdown h3 {
+    @apply text-lg text-swa-1;
+  }
+
+  .markdown p {
+    @apply text-base;
+  }
+
+  .markdown li {
+    @apply text-base list-disc list-inside;
+  }
+
+  .markdown a {
+    @apply font-bold text-blue-500 underline cursor-pointer hover:text-blue-700;
+  }
+}
+
+.loader {
+  border-top-color: rgb(243, 210, 255);
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------- UTILITIES ----------  */
