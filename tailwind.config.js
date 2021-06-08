@@ -11,7 +11,8 @@ module.exports = {
   darkMode: "media",
   theme: {
     fontFamily: {
-      sans: ["Roboto", "sans-serif"],
+      robo: ["Roboto", "sans-serif"],
+      mont: ["Montserrat", "serif"],
     },
     truncate: {
       lines: {

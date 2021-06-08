@@ -9,7 +9,7 @@
 
 @layer base {
   * {
-    @apply font-sans;
+    @apply font-robo;
   }
 
   h1 {
